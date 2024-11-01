@@ -1,0 +1,44 @@
+/**
+ * General CSS
+ */
+.stats_range .wcprb_print_report			{float: right; display: block; padding: 10px; border-left: 1px solid #dfdfdf; line-height: 26px; text-decoration: none;}
+.stats_range .wcprb_print_report::before	{content: "\f183"; position: relative; top: 1px; display: inline-block; margin-right: 4px; line-height: 1; text-decoration: none; text-transform: none; font-weight: 400; font-variant: normal; -webkit-font-smoothing: antialiased; speak: none; font-family: Dashicons;}
+#wcprbCanvasContainer						{display: none;}
+
+
+/**
+ * Print CSS
+ */
+@media print {
+	
+	
+	.wrap br.clear,
+	.wrap > div.error,
+	.wrap > div.notice,
+	.wrap > div.success,
+	.wrap > div.updated,
+	.woocommerce .subsubsub,
+	.woocommerce .wcprb_print_report,
+	.woocommerce-reports-wide .postbox div.stats_range .export_csv,
+	.woocommerce-reports-wide .postbox .stats_range ul li:not( .active )	{display: none;}
+	
+	.woo-nav-tab-wrapper							{display: block;}
+	.woo-nav-tab-wrapper a:not( .nav-tab-active )	{display: none;}
+	.woo-nav-tab-wrapper a.nav-tab-active			{float: none; display: block; margin: 0; padding: 0 0 20px !important; border: 0; padding: 0; line-height: 1; font-size: 24px !important;}
+	
+	html.wp-toolbar	{padding-top: 0;}
+	
+	.woocommerce-reports-wide .postbox .chart-with-sidebar							{padding-left: 12px;}
+	.woocommerce-reports-wide .postbox .chart-with-sidebar .chart-sidebar			{float: none; width: auto; margin: 0;}
+	.woocommerce-reports-wide .postbox .chart-with-sidebar .chart-sidebar > ul		{display: flex; flex-wrap: wrap;}
+	.woocommerce-reports-wide .postbox .chart-with-sidebar .chart-sidebar > ul > li	{flex: 1 0 auto; border-top: 5px solid; border-right: 1px solid #aaa !important; border-bottom: 1px solid #aaa !important;}
+	.woocommerce-reports-wide .postbox .chart-placeholder,
+	.woocommerce-reports-wrap .postbox .chart-placeholder							{overflow: visible;}
+	
+	.woocommerce-reports-wide .postbox .chart-container,
+	.woocommerce-reports-wrap .postbox .chart-container		{display: none;}
+	
+	#wcprbCanvasContainer		{display: block; margin: 0 auto;}
+	#wcprbCanvasContainer > img	{display: block; max-width: 100%; height: auto; margin: 0 auto;}
+	
+}
